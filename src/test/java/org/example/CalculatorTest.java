@@ -34,8 +34,6 @@ class CalculatorTest {
         assertEquals(2.0, calc.dividir(10.0, 5.0), "10 / 5 deve ser 2");
 
         // Cenário de Exceção (Onde o QA brilha)
-        assertThrows(ArithmeticException.class, () -> {
-            calc.dividir(10.0, 0);
-        }, "Deveria lançar ArithmeticException ao dividir por zero");
+        assertThrows(ArithmeticException.class, () -> calc.dividir(10.0, 0), "Deveria lançar ArithmeticException ao dividir por zero");
     }
 }
